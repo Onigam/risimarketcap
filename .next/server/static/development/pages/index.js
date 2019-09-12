@@ -1129,7 +1129,7 @@ const Index = ({
       lineNumber: 62
     },
     __self: undefined
-  }, "Risicoins"), __jsx("h5", {
+  }, "Risimarketcap"), __jsx("h5", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 63

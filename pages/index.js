@@ -59,7 +59,7 @@ const Index = ({ currencies }) => {
             <div className="col p-4 d-flex align-items-center">
                 <img className="mr-4" width={100} src={"http://image.noelshack.com/fichiers/2017/52/3/1514370207-risitas-bitcoin.png"} />
                 <div>
-                    <h3>Risicoins</h3>
+                    <h3>Risimarketcap</h3>
                     <h5>Top 100 Cryptocurrencies by Market Capitalization without fake volume</h5>
                 </div>
             </div>

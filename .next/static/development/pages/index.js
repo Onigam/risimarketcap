@@ -11278,7 +11278,7 @@ var Index = function Index(_ref2) {
       lineNumber: 62
     },
     __self: this
-  }, "Risicoins"), __jsx("h5", {
+  }, "Risimarketcap"), __jsx("h5", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 63
