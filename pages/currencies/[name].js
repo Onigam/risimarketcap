@@ -1,13 +1,15 @@
 import { useRouter } from 'next/router';
-import Layout from '../../components/MyLayout';
+import withLayout from '../../components/Layout';
 
-export default function Post() {
+const Currency = () => {
     const router = useRouter();
 
     return (
-        <Layout>
+        <div>
             <h1>{router.query.name}</h1>
-            <p>This is the blog post content.</p>
-        </Layout>
+            <p>The {router.query.name} page</p>
+        </div>
     );
 }
+
+export default withLayout(Currency);
