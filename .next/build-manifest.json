@@ -16,7 +16,7 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/about": [
+    "/currencies/[name]": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],

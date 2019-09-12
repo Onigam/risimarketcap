@@ -1,8 +1,8 @@
 import Header from './Header';
 import Head from 'next/head';
 
-const withLayout = Page => {
-    return () => (
+const withLayout = (Page, fetcher) => {
+    const pageComponent = (props) => (
         <div>
             <Head>
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -10,12 +10,18 @@ const withLayout = Page => {
                       crossOrigin="anonymous">
                 </link>
             </Head>
-            <Header />
+            {/*<Header />*/}
             <div className="container">
-                <Page />
+                <Page {...props} />
             </div>
         </div>
     );
+
+    pageComponent.getInitialProps = fetcher;
+
+    return pageComponent;
 };
+
+
 
 export default withLayout;
