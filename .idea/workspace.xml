@@ -2,7 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d609cf5-fdd5-41e8-bbf9-87ee5e5c828a" name="Default Changelist" comment="first draft for risimarketcap">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/[page].js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/build-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/build-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/autodll-webpack-plugin/development_instance_0_ac2b7c320e247c7570ef6f48605e35ea/stats.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/autodll-webpack-plugin/development_instance_0_ac2b7c320e247c7570ef6f48605e35ea/stats.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/next-babel-loader/39dc3fcbffc3c24ff4c60f5efa89cdfa.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/next-babel-loader/4d194eb1a301f40946d2953bcb08ca3a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/pages-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/static/development/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/static/development/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/static/development/pages/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/static/development/pages/index.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/static/development/pages/next/dist/pages/_error.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/static/development/pages/next/dist/pages/_error.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/static/development/pages/next/dist/pages/_error.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/static/development/pages/next/dist/pages/_error.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/development/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/static/development/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/development/pages/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/.next/static/development/pages/index.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/development/pages/next/dist/pages/_error.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/static/development/pages/next/dist/pages/_error.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/runtime/webpack.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/static/runtime/webpack.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/runtime/webpack.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/.next/static/runtime/webpack.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/651994ba45aacbbc87c5.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/f12bff89e05e35a9fce5.hot-update.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/static/webpack/f12bff89e05e35a9fce5.hot-update.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,19 +35,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/currencies/[name].js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="120">
+              <caret line="8" column="35" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="35" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -37,11 +46,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="61" selection-start-line="61" selection-end-line="62" selection-end-column="98" />
+            <state relative-caret-position="115">
+              <caret line="66" column="109" selection-start-line="66" selection-start-column="109" selection-end-line="66" selection-end-column="109" />
+              <folding>
+                <element signature="e#0#33#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/[page].js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
               </folding>
@@ -49,12 +70,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor>
-                <caret column="15" selection-start-column="2" selection-end-column="15" />
+              <first_editor relative-caret-position="90">
+                <caret line="6" selection-start-line="6" selection-end-line="6" />
               </first_editor>
               <second_editor />
             </state>
@@ -85,8 +106,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/about.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state>
+              <caret selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -94,8 +115,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/Layout.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+            <state relative-caret-position="195">
+              <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -131,25 +152,16 @@
         <option value="$PROJECT_DIR$/pages/currencies/[name].js" />
         <option value="$PROJECT_DIR$/data/currencies.js" />
         <option value="$PROJECT_DIR$/components/Header.js" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/pages/[page].js" />
         <option value="$PROJECT_DIR$/components/Layout.js" />
         <option value="$PROJECT_DIR$/pages/index.js" />
-        <option value="$PROJECT_DIR$/README.md" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/crypto-prices.iml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="266" />
-    <option name="y" value="147" />
+    <option name="x" value="89" />
+    <option name="y" value="41" />
     <option name="width" value="1765" />
     <option name="height" value="877" />
   </component>
@@ -221,15 +233,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1568284716021</updated>
-      <workItem from="1568284719060" duration="11915000" />
+      <workItem from="1568284719060" duration="15398000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11915000" />
+    <option name="totallyTimeSpent" value="15398000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="266" y="147" width="1765" height="877" extended-state="0" />
+    <frame x="89" y="41" width="1765" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" />
@@ -242,7 +254,7 @@
       <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" visible="true" weight="0.32950193" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" visible="true" weight="0.14048532" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -285,13 +297,6 @@
     <entry file="file://$PROJECT_DIR$/.next/build-manifest.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/about.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/currencies.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18075">
@@ -309,16 +314,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/currencies/[name].js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/Header.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -326,33 +321,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="90">
+            <caret line="6" selection-start-line="6" selection-end-line="6" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/about.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/currencies/[name].js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/components/Layout.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+        <state relative-caret-position="195">
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index.js">
+    <entry file="file://$PROJECT_DIR$/pages/[page].js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="61" selection-start-line="61" selection-end-line="62" selection-end-column="98" />
+        <state relative-caret-position="45">
+          <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor>
-            <caret column="15" selection-start-column="2" selection-end-column="15" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/pages/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="66" column="109" selection-start-line="66" selection-start-column="109" selection-end-line="66" selection-end-column="109" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

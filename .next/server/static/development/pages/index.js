@@ -946,11 +946,13 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 /*!************************!*\
   !*** ./pages/index.js ***!
   \************************/
-/*! exports provided: default */
+/*! exports provided: Index, fetcher, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Index", function() { return Index; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetcher", function() { return fetcher; });
 /* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/parse-int */ "./node_modules/@babel/runtime-corejs2/core-js/parse-int.js");
 /* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_corejs2_core_js_parse_float__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/parse-float */ "./node_modules/@babel/runtime-corejs2/core-js/parse-float.js");
@@ -962,11 +964,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_6__);
 
 
 var _jsxFileName = "/Users/magino/Dev/crypto-prices/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
+
+
 
 
 
@@ -1003,27 +1009,27 @@ const renderCurrencyRow = currency => {
   return __jsx("tr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 34
     },
     __self: undefined
   }, __jsx("th", {
     scope: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 35
     },
     __self: undefined
   }, currency.rank), __jsx("td", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 36
     },
     __self: undefined
   }, __jsx("div", {
     className: "d-flex align-items-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 37
     },
     __self: undefined
   }, __jsx("img", {
@@ -1033,79 +1039,115 @@ const renderCurrencyRow = currency => {
     src: `https://images.openmarketcap.com/coin_logos/16x16/${currency.name.toLowerCase()}.png`,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 38
     },
     __self: undefined
   }), __jsx("a", {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 42
     },
     __self: undefined
   }, currency.name))), __jsx("td", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
-    },
-    __self: undefined
-  }, "$", _babel_runtime_corejs2_core_js_parse_float__WEBPACK_IMPORTED_MODULE_1___default()(currency.price_usd).toFixed(3)), __jsx("td", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 44
-    },
-    __self: undefined
-  }, "$", _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(currency.market_cap)), __jsx("td", {
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 45
     },
     __self: undefined
-  }, "$", _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(currency.volume_usd)), __jsx("td", {
+  }, "$", _babel_runtime_corejs2_core_js_parse_float__WEBPACK_IMPORTED_MODULE_1___default()(currency.price_usd).toFixed(3)), __jsx("td", {
+    className: currency.price_change >= 0 ? 'text-success' : 'text-danger',
     __source: {
       fileName: _jsxFileName,
       lineNumber: 46
     },
     __self: undefined
-  }, currency.available_supply), __jsx("td", {
-    className: currency.price_change >= 0 ? 'text-success' : 'text-danger',
+  }, __jsx("div", {
+    className: "d-flex justify-content-between w-100",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 47
     },
     __self: undefined
-  }, _babel_runtime_corejs2_core_js_parse_float__WEBPACK_IMPORTED_MODULE_1___default()(currency.price_change).toFixed(2), "\xA0%"), __jsx("td", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 50
-    },
-    __self: undefined
-  }, __jsx("img", {
+  }, _babel_runtime_corejs2_core_js_parse_float__WEBPACK_IMPORTED_MODULE_1___default()(currency.price_change).toFixed(2), "\xA0%", __jsx("img", {
+    className: "mr-4",
     width: 56,
     src: risiMood(currency),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 49
     },
     __self: undefined
-  })));
+  }))), __jsx("td", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52
+    },
+    __self: undefined
+  }, "$", _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(currency.market_cap)), __jsx("td", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53
+    },
+    __self: undefined
+  }, "$", _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(currency.volume_usd)), __jsx("td", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54
+    },
+    __self: undefined
+  }, currency.available_supply));
 };
 
 const Index = ({
   currencies
 }) => {
+  const router = Object(next_router__WEBPACK_IMPORTED_MODULE_6__["useRouter"])();
+  const page = router.query.page ? router.query.page : 1;
+
+  const renderPaginatedButton = () => {
+    return __jsx("div", {
+      className: " d-flex justify-content-end btn-group",
+      role: "group",
+      "aria-label": "Pagination buttons",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 65
+      },
+      __self: undefined
+    }, page > 1 && __jsx("button", {
+      type: "button",
+      className: "btn btn-small",
+      onClick: () => next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push(`/${_babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(page) - 1}`),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 66
+      },
+      __self: undefined
+    }, "\u2190 Previous 100"), __jsx("button", {
+      type: "button",
+      className: "btn btn-small",
+      onClick: () => next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push(`/${_babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(page) + 1}`),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 67
+      },
+      __self: undefined
+    }, "Next 100 \u2192"));
+  };
+
   return __jsx(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, __jsx("div", {
     className: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 73
     },
     __self: undefined
   }, __jsx("div", {
     className: "col p-4 d-flex align-items-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 74
     },
     __self: undefined
   }, __jsx("img", {
@@ -1114,134 +1156,142 @@ const Index = ({
     src: "http://image.noelshack.com/fichiers/2017/52/3/1514370207-risitas-bitcoin.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 75
     },
     __self: undefined
   }), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 76
     },
     __self: undefined
   }, __jsx("h3", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 77
     },
     __self: undefined
   }, "Risimarketcap"), __jsx("h5", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 78
     },
     __self: undefined
   }, "Top 100 Cryptocurrencies by Market Capitalization without fake volume")))), __jsx("div", {
     className: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 82
     },
     __self: undefined
   }, __jsx("div", {
     className: "col",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 83
+    },
+    __self: undefined
+  }, renderPaginatedButton())), __jsx("div", {
+    className: "row",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 87
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "col",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 88
     },
     __self: undefined
   }, __jsx("table", {
     className: "table",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 89
     },
     __self: undefined
   }, __jsx("thead", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 90
     },
     __self: undefined
   }, __jsx("tr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 91
     },
     __self: undefined
   }, __jsx("th", {
     scope: "col",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 92
     },
     __self: undefined
   }, "#"), __jsx("th", {
     scope: "col",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 93
     },
     __self: undefined
   }, "Name"), __jsx("th", {
     scope: "col",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 94
     },
     __self: undefined
   }, "Price USD"), __jsx("th", {
     scope: "col",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
-    },
-    __self: undefined
-  }, "Market Cap"), __jsx("th", {
-    scope: "col",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 76
-    },
-    __self: undefined
-  }, "Volume (24h)"), __jsx("th", {
-    scope: "col",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 77
-    },
-    __self: undefined
-  }, "Available supply"), __jsx("th", {
-    scope: "col",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 95
     },
     __self: undefined
   }, "Price change (24h)"), __jsx("th", {
     scope: "col",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 96
     },
     __self: undefined
-  }, "Risi mood"))), __jsx("tbody", {
+  }, "Market Cap"), __jsx("th", {
+    scope: "col",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 97
     },
     __self: undefined
-  }, currencies && currencies.data && currencies.data.map(renderCurrencyRow))))));
+  }, "Volume (24h)"), __jsx("th", {
+    scope: "col",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 98
+    },
+    __self: undefined
+  }, "Available supply"))), __jsx("tbody", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 101
+    },
+    __self: undefined
+  }, currencies.data && currencies.data.map(renderCurrencyRow))))));
 };
-
-const fetcher = async function () {
-  const res = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5___default()('http://api.openmarketcap.com/api/v1/tokens');
+const fetcher = async function ({
+  query
+}) {
+  const page = query.page ? query.page : 1;
+  const res = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5___default()(`http://api.openmarketcap.com/api/v1/tokens?page=${page}`);
   const data = await res.json();
   console.log(`Show data fetched. Count: ${data.data.length}`);
   return {
     currencies: data
   };
 };
-
 /* harmony default export */ __webpack_exports__["default"] = (Object(_components_Layout__WEBPACK_IMPORTED_MODULE_3__["default"])(Index, fetcher));
 
 /***/ }),
@@ -1387,6 +1437,17 @@ module.exports = require("next-server/dist/lib/utils");
 /***/ (function(module, exports) {
 
 module.exports = require("next/head");
+
+/***/ }),
+
+/***/ "next/router":
+/*!******************************!*\
+  !*** external "next/router" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/router");
 
 /***/ }),
 
