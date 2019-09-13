@@ -57,7 +57,7 @@ const renderCurrencyRow = (currency) => {
     </tr>);
 };
 
-export const Index = ({ currencies }) => {
+export const Index = ({ currencies, title}) => {
 
     const router = useRouter();
     const page = router.query.page ? router.query.page : 1;
@@ -73,12 +73,8 @@ export const Index = ({ currencies }) => {
 
     return (<>
         <div className="row">
-            <div className="col p-4 d-flex align-items-center">
-                <img className="mr-4" width={100} src={"http://image.noelshack.com/fichiers/2017/52/3/1514370207-risitas-bitcoin.png"} />
-                <div>
-                    <h3>Risimarketcap</h3>
-                    <h5>Cryptocurrencies top ranking by Market Capitalization</h5>
-                </div>
+            <div className="col p-4 d-flex align-items-center justify-content-center">
+                <h5>{title}</h5>
             </div>
         </div>
         <div className="row">
@@ -122,7 +118,9 @@ export const fetcher = async function({ query }) {
     console.log(`Show data fetched. Count: ${data.data.length}`);
 
     return {
-        currencies: data
+        currencies: data,
+        title: "Cryptocurrencies top ranking by Market Capitalization",
+        description: ""
     };
 };
 

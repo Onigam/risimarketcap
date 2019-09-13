@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Header from './Header';
 
 const withLayout = (Page, fetcher) => {
     const pageComponent = (props) => (
@@ -9,10 +10,11 @@ const withLayout = (Page, fetcher) => {
                       crossOrigin="anonymous">
                 </link>
                 <link rel="icon" type="image/png" href="/static/favicon.png" />
-                <title>Top 100 Cryptocurrencies by Market Capitalization without fake volume</title>
+                <title>Risimarketcap: {props.title}</title>
+                <meta name="description" content={props.description} />
             </Head>
-            {/*<Header />*/}
             <div className="container">
+                <Header />
                 <Page {...props} />
             </div>
         </div>

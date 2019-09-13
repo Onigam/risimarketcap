@@ -42,7 +42,9 @@ export const fetcher = async function({ query }) {
     console.log(`Show data fetched for ${JSON.stringify(data[key])}`);
 
     return {
-        currency: data[key]
+        currency: data[key],
+        title: data[key].name,
+        description: data[key].description
     };
 };
 
