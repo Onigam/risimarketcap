@@ -41,14 +41,14 @@ const renderCurrencyRow = (currency) => {
                 {/*<Link href="/currencies/[name]" as={`/currencies/${currency.symbol}`}>*/}
                 {/*    <a>{currency.name}</a>*/}
                 {/*</Link>*/}
-                <a href="/">{currency.name}</a>
+                <a href={`/currencies/${currency.slug}`}>{currency.name}</a>
             </div>
         </td>
         <td>{formatCurrency(currencyQuote.price)}</td>
         <td className={currencyQuote.percent_change_24h >= 0 ? 'text-success' : 'text-danger'}>
            <div className="d-flex justify-content-between w-100">
             {parseFloat(currencyQuote.percent_change_24h).toFixed(2)}&nbsp;%
-            <img className="mr-4" width={56} src={risiMood(currencyQuote)} />
+            <img className="mr-4" width={42} src={risiMood(currencyQuote)} />
            </div>
         </td>
         <td>{formatCurrency(currencyQuote.market_cap)}</td>
@@ -77,7 +77,7 @@ export const Index = ({ currencies }) => {
                 <img className="mr-4" width={100} src={"http://image.noelshack.com/fichiers/2017/52/3/1514370207-risitas-bitcoin.png"} />
                 <div>
                     <h3>Risimarketcap</h3>
-                    <h5>Top 100 Cryptocurrencies by Market Capitalization without fake volume</h5>
+                    <h5>Cryptocurrencies top ranking by Market Capitalization</h5>
                 </div>
             </div>
         </div>
