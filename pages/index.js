@@ -1,10 +1,8 @@
-import { useState } from 'react';
 import withLayout from '../components/Layout';
-import Link from 'next/link';
 import fetch from 'isomorphic-unfetch';
 import Router, { useRouter } from 'next/router';
 
-const risiMood = ({ price_change }) => {
+const risiMood = ({ percent_change_24h: price_change }) => {
 
     let result = '';
 
@@ -31,27 +29,31 @@ const risiMood = ({ price_change }) => {
 };
 
 const renderCurrencyRow = (currency) => {
+    const { quote: { USD: currencyQuote }} = currency;
+    const formatCurrency = (value) => (
+        new Intl.NumberFormat('en-EN', { maximumFractionDigits: 4, style: 'currency', currency: 'USD' }).format(value)
+    );
     return (<tr>
-        <th scope="row">{currency.rank}</th>
+        <th scope="row">{currency.cmc_rank}</th>
         <td>
             <div className="d-flex align-items-center">
-                <img className="mr-3" width={16} height={16} src={`https://images.openmarketcap.com/coin_logos/16x16/${currency.name.toLowerCase()}.png`} />
+                <img className="mr-3" width={16} height={16} src={`https://s2.coinmarketcap.com/static/img/coins/32x32/${currency.id}.png`} />
                 {/*<Link href="/currencies/[name]" as={`/currencies/${currency.symbol}`}>*/}
                 {/*    <a>{currency.name}</a>*/}
                 {/*</Link>*/}
                 <a href="/">{currency.name}</a>
             </div>
         </td>
-        <td>${parseFloat(currency.price_usd).toFixed(3)}</td>
-        <td className={currency.price_change >= 0 ? 'text-success' : 'text-danger'}>
+        <td>{formatCurrency(currencyQuote.price)}</td>
+        <td className={currencyQuote.percent_change_24h >= 0 ? 'text-success' : 'text-danger'}>
            <div className="d-flex justify-content-between w-100">
-            {parseFloat(currency.price_change).toFixed(2)}&nbsp;%
-            <img className="mr-4" width={56} src={risiMood(currency)} />
+            {parseFloat(currencyQuote.percent_change_24h).toFixed(2)}&nbsp;%
+            <img className="mr-4" width={56} src={risiMood(currencyQuote)} />
            </div>
         </td>
-        <td>${parseInt(currency.market_cap)}</td>
-        <td>${parseInt(currency.volume_usd)}</td>
-        <td>{currency.available_supply}</td>
+        <td>{formatCurrency(currencyQuote.market_cap)}</td>
+        <td>{formatCurrency(currencyQuote.volume_24h)}</td>
+        <td>{currency.circulating_supply}</td>
     </tr>);
 };
 
@@ -108,7 +110,12 @@ export const Index = ({ currencies }) => {
 };
 export const fetcher = async function({ query }) {
     const page = query.page ? query.page : 1;
-    const res = await fetch(`http://api.openmarketcap.com/api/v1/tokens?page=${page}`);
+    const limit = 100;
+    const start = 1 + ((page-1)*limit);
+    const res = await fetch(
+        `https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=${start}&limit=${limit}&convert=USD`,
+        { headers: {'X-CMC_PRO_API_KEY': '2f418ece-b829-41f7-b888-d79ac329f403'}}
+    );
 
     const data = await res.json();
 
