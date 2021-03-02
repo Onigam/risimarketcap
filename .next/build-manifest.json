@@ -4,7 +4,7 @@
     "static/development/dll/dll_397dc449097af0b4e992.js.map"
   ],
   "pages": {
-    "/": [
+    "/[page]": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
@@ -16,7 +16,7 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/index": [
+    "/currencies/[slug]": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]
